@@ -1,13 +1,16 @@
 
-const form = document.querySelector("form");
+// Formulaire géré par Formspree.
+// L'envoi se fait directement via l'attribut "action" du formulaire.
 
-form.addEventListener("submit", function(event) {
-    event.preventDefault();
+const form = document.querySelector("#rendez-vous form");
 
-    alert(
-        "Merci ! Votre demande de rendez-vous a été envoyée. " +
-        "L'Auto-École Ben Khedher vous contactera pour confirmer le rendez-vous."
-    );
+if (form) {
+    form.addEventListener("submit", function () {
+        const button = form.querySelector("button[type='submit']");
 
-    form.reset();
-});
+        if (button) {
+            button.textContent = "Envoi en cours...";
+            button.disabled = true;
+        }
+    });
+}
