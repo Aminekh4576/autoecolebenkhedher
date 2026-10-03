@@ -1,0 +1,274 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fa;
+    color: #17202a;
+}
+
+/* ===== HEADER ===== */
+
+header {
+    width: 100%;
+    padding: 18px 6%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+}
+
+.logo {
+    font-size: 21px;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    gap: 22px;
+}
+
+nav a {
+    color: #17202a;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #1976d2;
+}
+
+.appointment {
+    background: #1976d2;
+    color: white;
+    text-decoration: none;
+    padding: 12px 18px;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+/* ===== HERO ===== */
+
+.hero {
+    min-height: 650px;
+    display: flex;
+    align-items: center;
+    padding: 70px 8%;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(10, 25, 45, 0.95),
+            rgba(10, 25, 45, 0.55)
+        ),
+        url("https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?auto=format&fit=crop&w=1600&q=80");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    max-width: 650px;
+    color: white;
+}
+
+.welcome {
+    font-weight: bold;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 65px;
+    line-height: 1.05;
+    margin-bottom: 25px;
+}
+
+h1 span {
+    color: #42a5f5;
+}
+
+.hero-content > p:not(.welcome) {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 35px;
+}
+
+.main-button {
+    display: inline-block;
+    background: #1976d2;
+    color: white;
+    padding: 16px 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.main-button:hover {
+    background: #0d47a1;
+    transform: translateY(-2px);
+}
+
+/* ===== SECTIONS ===== */
+
+section:not(.hero) {
+    padding: 80px 8%;
+}
+
+h2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 45px;
+}
+
+/* ===== CARDS ===== */
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    padding: 35px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.card > div {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    margin-bottom: 12px;
+}
+
+.card p,
+.section-text {
+    line-height: 1.7;
+    color: #5f6b76;
+}
+
+.section-text {
+    max-width: 700px;
+    margin: auto;
+    text-align: center;
+}
+
+/* ===== APPOINTMENT ===== */
+
+#rendez-vous {
+    background: #eaf3fb;
+}
+
+form {
+    max-width: 650px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #d5dce3;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: inherit;
+}
+
+textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+form button {
+    padding: 16px;
+    border: none;
+    border-radius: 8px;
+    background: #1976d2;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: #0d47a1;
+}
+
+/* ===== CONTACT ===== */
+
+#contact {
+    text-align: center;
+}
+
+#contact p {
+    margin: 12px;
+    font-size: 18px;
+}
+
+/* ===== FOOTER ===== */
+
+footer {
+    background: #101820;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+footer p {
+    margin: 7px;
+}
+
+/* ===== PHONE ===== */
+
+@media (max-width: 800px) {
+
+    header {
+        flex-direction: column;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    h1 {
+        font-size: 45px;
+    }
+
+    .hero {
+        min-height: 550px;
+        padding: 50px 6%;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+}
