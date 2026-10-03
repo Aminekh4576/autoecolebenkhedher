@@ -110,48 +110,65 @@
 
             <h2>📅 Réserver un rendez-vous</h2>
 
-            <form>
+            <!-- Formspree -->
+            <form
+                action="https://formspree.io/f/mbglnpne"
+                method="POST"
+            >
 
                 <input
                     type="text"
+                    name="nom"
                     placeholder="Nom et prénom"
                     required
                 >
 
                 <input
                     type="tel"
+                    name="telephone"
                     placeholder="Numéro de téléphone"
                     required
                 >
 
                 <input
                     type="date"
+                    name="date"
                     required
                 >
 
-                <select required>
+                <select
+                    name="type_rendez_vous"
+                    required
+                >
 
                     <option value="">
                         Choisir le type de rendez-vous
                     </option>
 
-                    <option>
+                    <option value="Inscription">
                         Inscription
                     </option>
 
-                    <option>
+                    <option value="Information">
                         Information
                     </option>
 
-                    <option>
+                    <option value="Formation">
                         Formation
                     </option>
 
                 </select>
 
                 <textarea
+                    name="message"
                     placeholder="Message (facultatif)"
                 ></textarea>
+
+                <input
+                    type="hidden"
+                    name="_subject"
+                    value="Nouvelle demande de rendez-vous - Auto-École Ben Khedher"
+                >
 
                 <button type="submit">
                     Envoyer la demande
@@ -175,7 +192,7 @@
             </p>
 
             <p>
-                📞 Téléphone : 98827819-90460099
+                📞 Téléphone : à ajouter
             </p>
 
         </section>
